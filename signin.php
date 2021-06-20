@@ -26,7 +26,7 @@ if ( isset($_POST['submit'])){
 
   } else {
 
-    $link = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PWD, MYSQL_DB);
+    $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
     $email = mysqli_real_escape_string($link, $email);
     $password = mysqli_real_escape_string($link, $password);
     $sql = "SELECT * FROM users WHERE email = '$email' ";

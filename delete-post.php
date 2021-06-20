@@ -14,7 +14,7 @@ if( isset($_POST['submit']) ){
   
     if( $pid && is_numeric($pid) ){
   
-      $link = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PWD, MYSQL_DB);
+      $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
       $pid = mysqli_real_escape_string($link, $pid);
       $sql = "DELETE FROM posts WHERE id = $pid AND user_id = $uid";
       mysqli_query($link, $sql);

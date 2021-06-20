@@ -23,7 +23,7 @@ if( isset($_POST['submit'])){
   $password = trim($password);
 
   $valid_form = $uploaded_image = true;
-  $link = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PWD, MYSQL_DB);
+  $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
   $name = mysqli_real_escape_string($link, $name);
   $email = mysqli_real_escape_string($link, $email);
   $password = mysqli_real_escape_string($link, $password);

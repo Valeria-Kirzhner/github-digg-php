@@ -4,7 +4,7 @@ session_start();
 
 require_once "app/helpers.php";
 $page_title = 'Blog Page';
-$link = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PWD, MYSQL_DB);
+$link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 $sql = "SELECT u.name,u.image_profile,p.* FROM posts p
 	JOIN users u ON p.user_id= u.id 
   ORDER BY p.date DESC" ;

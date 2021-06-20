@@ -58,7 +58,7 @@ if( isset($_POST['submit'])){
       
       if( $form_valid ){
 
-        $link = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PWD, MYSQL_DB);
+        $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
         $title = mysqli_real_escape_string($link, $title);
         $article = mysqli_real_escape_string($link, $article);
         $sql = "UPDATE posts SET title = '$title', article = '$article' WHERE id = $pid AND user_id = $uid";
