@@ -5,7 +5,7 @@ define('MYSQL_PWD', 'root');
 define('MYSQL_DB', 'digg');*/
 
 //Get Heroku ClearDB connection information
-$cleardb_url = parse_url(getenv("https://digg-app.herokuapp.com"));
+$cleardb_url = parse_url(getenv("heroku_e8e8c6512f0de7b"));
 $cleardb_server = $cleardb_url["heroku_e8e8c6512f0de7b"];
 $cleardb_username = $cleardb_url["bcd0b85d77274b"];
 $cleardb_password = $cleardb_url["19952954"];
